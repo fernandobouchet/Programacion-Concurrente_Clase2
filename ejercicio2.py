@@ -1,15 +1,16 @@
 import threading
 import time
 
-def funcion():
-    print("hola el hilo "+threading.currentThread().name)
-    time.sleep(4)
-thread_1 = threading.Thread(target=funcion)
-thread_2 = threading.Thread(target=funcion)
+def algunHilo():
+    print("\nHilo actual: {}".format(threading.current_thread()))
+    print("\nHilo principal: {}".format(threading.main_thread()))
 
-thread_1.start()
-thread_2.start()
+hilos = []
 
-print("hay en ejecucion "+str(threading.activeCount())+" hilos")
-print("Los hilos son")
-print(threading.enumerate())
+for i in range(3):
+    hilo = threading.Thread(target=algunHilo)
+    hilo.start()
+    hilos.append(hilo)
+
+for hilo in hilos:
+    hilo.join()
