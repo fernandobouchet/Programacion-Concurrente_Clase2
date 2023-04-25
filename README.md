@@ -10,15 +10,19 @@ globalVarsEjemplo.py
 globalContador.py
 ```
 ## Ejercicios Resueltos en Clase
-### Ejercicio 1:
+## Ejercicio 1:
     Escribir un programa que lance 2 hilos que impriman un mensaje que identifique al hilo.
 ```
 ejercicio1.py
 
-ejercicio2.py
-### Ejercicio 2:
-    Modificar el programa del ejercicio anterior de modo que lance una cantidad de hilos especificada por el valor de una variable o constante.
 ```
+## Ejercicio 2:
+    Modificar el programa del ejercicio anterior de modo que lance una cantidad de hilos especificada por el valor de una variable o constante. El hilo principal debe 
+    esperar a que todos los hilos terminen.
+```
+ejercicio2.py
+
+```  
 
 ## Ejercicio - Para resolver antes de la clase 3:
 
