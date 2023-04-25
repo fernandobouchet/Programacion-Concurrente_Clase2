@@ -11,7 +11,7 @@ globalContador.py
 ```
 ## Ejercicios Resueltos en Clase
 ## Ejercicio 1:
-    Escribir un programa que lance 2 hilos que impriman un mensaje que identifique al hilo.
+Escribir un programa que lance 2 hilos que impriman un mensaje que identifique al hilo.
 ```
 ejercicio1.py
 ```
