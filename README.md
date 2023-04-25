@@ -1,6 +1,7 @@
+# Clase 2
 # Concurrencia en Python
 
-## Video Clase 2 - Codigo Fuente
+## Ejemplos Clase 2 - Codigo Fuente
 ```
 procesosEjemplo.py
 procesosEjemplo2.py
@@ -8,8 +9,18 @@ threadsEjemplo.py
 globalVarsEjemplo.py
 globalContador.py
 ```
+## Ejercicios Resueltos en Clase
+### Ejercicio 1:
+    Escribir un programa que lance 2 hilos que impriman un mensaje que identifique al hilo.
+```
+ejercicio1.py
 
-## Ejercicio:
+ejercicio2.py
+### Ejercicio 2:
+    Modificar el programa del ejercicio anterior de modo que lance una cantidad de hilos especificada por el valor de una variable o constante.
+```
+
+## Ejercicio - Para resolver antes de la clase 3:
 
 ```
 textoAnimado.py
