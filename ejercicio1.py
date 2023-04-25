@@ -1,16 +1,16 @@
 import threading
 import time
 
-def funcion():
-    i=0
-    while i<5:
-        i =i+1
-        print(i)
-        time.sleep(2)
+def algunHilo():
+    print("\nHilo actual: {}".format(threading.current_thread()))
+    print("\nHilo principal: {}".format(threading.main_thread()))
 
-thread_1 = threading.Thread(target=funcion)
-thread_2 = threading.Thread(target=funcion)
+hilos = []
 
-thread_1.start()
-thread_2.start()
+for i in range(3):
+    hilo = threading.Thread(target=algunHilo)
+    hilo.start()
+    hilos.append(hilo)
 
+for hilo in hilos:
+    hilo.join()
