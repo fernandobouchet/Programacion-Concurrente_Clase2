@@ -1,5 +1,5 @@
 #Importa módulos para Interfaz Gráfica de usuario (tkinter)
-import threading
+import multiprocessing
 import tkinter as tk
 from tkinter import ttk
 import time
@@ -33,17 +33,24 @@ def crearAnimacion(a, b, char):
         main_window.update()
 
 #Ejecuta tres animaciones
-thread_1=threading.Thread(target=crearAnimacion, args=[10,10,'X'])
-thread_2=threading.Thread(target=crearAnimacion, args=[10,30,'Y'])
-thread_3=threading.Thread(target=crearAnimacion, args=[10,50,'Z'])
 
-thread_1.start()
-thread_2.start()
-thread_3.start()
+if __name__ == '__main__':
+    worker_1 = multiprocessing.Process( target=crearAnimacion, args=[10,10,'X'])
+    worker_2 = multiprocessing.Process( target=crearAnimacion, args=[10,30,'Y'])
+    worker_3 = multiprocessing.Process( target=crearAnimacion, args=[10,50,'Z'])
+
+    worker_1.start()
+    worker_2.start()
+    worker_3.start()
+
+    worker_1.join()
+    worker_2.join()
+    worker_3.join()
+
 
 # Mantener las siguientes líneas siempre al final del script y en el mismo orden.
 #Coloca la opcion "Salir"
-opcionFinalizar()
+    opcionFinalizar()
 
 #Bucle principal de la ventana
-main_window.mainloop()
+    main_window.mainloop()
